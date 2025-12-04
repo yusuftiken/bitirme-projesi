@@ -6,7 +6,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/auth");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 
 // Middleware
 app.use(
@@ -16,6 +16,11 @@ app.use(
   })
 );
 app.use(express.json());
+
+// Ana giriş sayfasına yönlendir
+app.get("/", (_req, res) => {
+  res.redirect("/website-giriş-sayfası/website-giriş-sayfası.html");
+});
 
 // Statik dosyaları servis et (frontend)
 app.use(express.static(path.join(__dirname, "../campusumer")));
