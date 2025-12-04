@@ -114,6 +114,10 @@
             });
 
             const data = await response.json();
+            console.log("Öğrenci kayıt yanıtı:", {
+              status: response.status,
+              body: data,
+            });
 
             if (response.ok && data.success) {
               successDiv.textContent =
