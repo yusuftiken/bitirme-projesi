@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Summer Öğrenci Kayıt</title>
+    <link rel="stylesheet" href="öğrenci-kayıt.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="register-panel">
+        <img
+          src="../öğrenci-giriş/2.3.logo.png"
+          alt="Campus Summer Logo"
+          class="logo"
+        />
+        <h2>Campus Summer</h2>
+        <div class="user-type">Öğrenci Kayıt</div>
+
+        <form id="registerForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">Ad:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Soyad:</label>
+              <input type="text" id="lastName" name="lastName" required />
+            </div>
+          </div>
+
+          <label for="email">E-posta:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="studentNumber">Okul Numarası:</label>
+          <input type="text" id="studentNumber" name="studentNumber" required />
+
+          <label for="password">Şifre:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            minlength="6"
+            required
+          />
+
+          <label for="passwordConfirm">Şifre Tekrar:</label>
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            minlength="6"
+            required
+          />
+
+          <div id="errorMessage" class="error-message"></div>
+          <div id="successMessage" class="success-message"></div>
+
+          <button type="submit" class="register-btn">Kayıt Ol</button>
+
+          <p class="login-link">
+            Zaten hesabınız var mı?
+            <a href="../öğrenci-giriş/öğrenci-giriş.html">Giriş Yap</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const API_URL = "http://localhost:3000/api";
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const errorDiv = document.getElementById("errorMessage");
+          const successDiv = document.getElementById("successMessage");
+          errorDiv.textContent = "";
+          successDiv.textContent = "";
+
+          const firstName = document.getElementById("firstName").value.trim();
+          const lastName = document.getElementById("lastName").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const studentNumber = document
+            .getElementById("studentNumber")
+            .value.trim();
+          const password = document.getElementById("password").value;
+          const passwordConfirm =
+            document.getElementById("passwordConfirm").value;
+
+          // Şifre kontrolü
+          if (password !== passwordConfirm) {
+            errorDiv.textContent = "Şifreler eşleşmiyor!";
+            return;
+          }
+
+          if (password.length < 6) {
+            errorDiv.textContent = "Şifre en az 6 karakter olmalı!";
+            return;
+          }
+
+          try {
+            const response = await fetch(`${API_URL}/auth/student/register`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                firstName,
+                lastName,
+                email,
+                studentNumber,
+                password,
+              }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok && data.success) {
+              successDiv.textContent =
+                "Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz...";
+              localStorage.setItem("token", data.token);
+              localStorage.setItem("user", JSON.stringify(data.user));
+
+              setTimeout(() => {
+                window.location.href = "../campusumer-anasayfa/anasayfa.html";
+              }, 1500);
+            } else {
+              errorDiv.textContent =
+                data.message || "Kayıt sırasında bir hata oluştu";
+            }
+          } catch (error) {
+            console.error("Kayıt hatası:", error);
+            errorDiv.textContent =
+              "Sunucuya bağlanılamadı. Lütfen tekrar deneyin.";
+          }
+        });
+    </script>
+  </body>
+</html>

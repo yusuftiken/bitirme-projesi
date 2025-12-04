@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üniversiteler - Campus Summer</title>
+    <link rel="stylesheet" href="anasayfa.css">
+    <link rel="stylesheet" href="üniversiteler.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="2.3.logo.png" alt="Campus Summer Logo">
+                <span>Campus Summer</span> 
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="anasayfa.html" class="nav-link active">Anasayfa</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Dersler/dersler.html" class="nav-link">Dersler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Üniversiteler/Üniversitler.html" class="nav-link">Üniversiteler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Fakülteler/fakülteler.html" class="nav-link">Fakülteler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Hakkımızda/Hakkımızda.html" class="nav-link">Hakkımızda</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../İletişim/iletisim.html" class="nav-link">İletişim</a>
+                </div>
+            </nav>
+
+            
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Üniversiteler</h1>
+                <p>200+ üniversiteden yaz dersleri ile akademik geleceğinizi şekillendirin</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">200+</div>
+                        <div class="stat-label">Üniversite</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">81</div>
+                        <div class="stat-label">Şehir</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Yaz Dersi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arama Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <h2>Üniversite Ara</h2>
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <input type="text" placeholder="Üniversite adı yazın..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">Tümü</button>
+                        <button class="filter-btn" data-filter="devlet">Devlet</button>
+                        <button class="filter-btn" data-filter="ozel">Özel</button>
+                        <button class="filter-btn" data-filter="vakif">Vakıf</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Üniversiteler Section -->
+    <section class="universiteler-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popüler Üniversiteler</h2>
+                <p>En çok tercih edilen üniversiteler ve yaz dersleri</p>
+            </div>
+            
+            <div class="universiteler-grid">
+                <div class="universite-card" data-type="ozel">
+                    <div class="universite-badge">Özel</div>
+                    <div class="universite-logo">
+                        <span>HKÜ</span>
+                    </div>
+                    <h3>Hasan Kalyoncu Üniversitesi</h3>
+                    <p class="universite-location">📍 Gaziantep</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">45</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="devlet">
+                    <div class="universite-badge devlet">Devlet</div>
+                    <div class="universite-logo">
+                        <span>ODTÜ</span>
+                    </div>
+                    <h3>Orta Doğu Teknik Üniversitesi</h3>
+                    <p class="universite-location">📍 Ankara</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">78</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">16</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="devlet">
+                    <div class="universite-badge devlet">Devlet</div>
+                    <div class="universite-logo">
+                        <span>BÜ</span>
+                    </div>
+                    <h3>Boğaziçi Üniversitesi</h3>
+                    <p class="universite-location">📍 İstanbul</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">82</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">14</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="devlet">
+                    <div class="universite-badge devlet">Devlet</div>
+                    <div class="universite-logo">
+                        <span>AÜ</span>
+                    </div>
+                    <h3>Ankara Üniversitesi</h3>
+                    <p class="universite-location">📍 Ankara</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">95</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="devlet">
+                    <div class="universite-badge devlet">Devlet</div>
+                    <div class="universite-logo">
+                        <span>İÜ</span>
+                    </div>
+                    <h3>İstanbul Üniversitesi</h3>
+                    <p class="universite-location">📍 İstanbul</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">120</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">22</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="devlet">
+                    <div class="universite-badge devlet">Devlet</div>
+                    <div class="universite-logo">
+                        <span>İTÜ</span>
+                    </div>
+                    <h3>İstanbul Teknik Üniversitesi</h3>
+                    <p class="universite-location">📍 İstanbul</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">67</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="vakif">
+                    <div class="universite-badge vakif">Vakıf</div>
+                    <div class="universite-logo">
+                        <span>SÜ</span>
+                    </div>
+                    <h3>Sabancı Üniversitesi</h3>
+                    <p class="universite-location">📍 İstanbul</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">42</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+
+                <div class="universite-card" data-type="vakif">
+                    <div class="universite-badge vakif">Vakıf</div>
+                    <div class="universite-logo">
+                        <span>KÜ</span>
+                    </div>
+                    <h3>Koç Üniversitesi</h3>
+                    <p class="universite-location">📍 İstanbul</p>
+                    <div class="universite-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">38</span>
+                            <span class="stat-label">Yaz Dersi</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Fakülte</span>
+                        </div>
+                    </div>
+                    <button class="universite-button">Dersleri Gör</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Campus Summer</h3>
+                    <p>Türkiye'nin en kapsamlı yaz dersleri takip platformu. Akademik hedeflerinize ulaşmanın en kolay yolu.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <a href="anasayfa.html">Ana Sayfa</a>
+                    <a href="../Üniversiteler/Üniversitler.html">Üniversiteler</a>
+                    <a href="../Dersler/dersler.html">Dersler</a>
+                    <a href="../Hakkımızda/Hakkımızda.html">Hakkımızda</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Destek</h3>                    
+                    <a href="../İletişim/iletisim.html">İletişim</a>
+                    <a href="../Gizlilik-politikası/gizlilikpolitikası.html">Gizlilik Politikası</a>
+                    
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p>📧 atakan.baskir@std.hku.edu.tr</p>
+                    <p>📞 +90 506 536 1780</p>
+                    <p>📍 Gaziantep, Türkiye</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campus Summer. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+   </footer>
+    
+
+</body>
+</html>

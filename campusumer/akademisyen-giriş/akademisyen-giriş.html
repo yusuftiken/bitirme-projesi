@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Summer Akademisyen Giriş</title>
+    <link rel="stylesheet" href="akademisyen-giriş.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-panel">
+            <img src="2.3.logo.png" alt="Campus Summer Logo" class="logo">
+            <h2>Campus Summer</h2>
+            <div class="user-type">Akademisyen</div>
+            <form id="loginForm">
+                <label for="username">Kullanıcı Adı:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Şifre</label>
+                <input type="password" id="password" name="password" required>
+
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+
+                <button type="submit" class="login-btn">Giriş</button>
+                <a href="#" class="forgot-password">Şifre Sıfırla</a>
+            </form>
+
+            <p class="register-link">
+                Hesabınız yok mu? 
+                <a href="../akademisyen-kayıt/akademisyen-kayıt.html">Kayıt Ol</a>
+            </p>
+            
+        
+
+        <div class="announcement-panel">
+            <h3>📢 DUYURULAR</h3>
+            
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const errorDiv = document.getElementById('errorMessage');
+            const successDiv = document.getElementById('successMessage');
+            errorDiv.textContent = '';
+            successDiv.textContent = '';
+
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch(`${API_URL}/auth/academician/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    successDiv.textContent = 'Giriş başarılı! Yönlendiriliyorsunuz...';
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    
+                    setTimeout(() => {
+                        window.location.href = '../campusumer-anasayfa/anasayfa.html';
+                    }, 1000);
+                } else {
+                    errorDiv.textContent = data.message || 'Giriş sırasında bir hata oluştu';
+                }
+            } catch (error) {
+                console.error('Giriş hatası:', error);
+                errorDiv.textContent = 'Sunucuya bağlanılamadı. Lütfen tekrar deneyin.';
+            }
+        });
+    </script>
+</body>
+</html>

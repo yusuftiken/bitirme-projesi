@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.header {
+  background-color: #1a252f;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+.header .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.header .right-text {
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.login-section {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  color: gray;
+}
+.login-section a {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid rgb(2, 2, 2);
+  border-radius: 0;
+}
+.login-section a:hover {
+  background-color: white;
+}
+.changeLanguage {
+  max-width: 400px auto;
+  margin: 20px auto;
+  text-align: center;
+  color: gray;
+}
+.changeLanguage a {
+  display: block;
+  padding: 5px 10px;
+  margin: 5px 0;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+}
+.register-section {
+  max-width: 400px;
+  margin: 30px auto;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+.register-section p {
+  color: #666;
+  margin-bottom: 15px;
+}
+.register-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px 10px;
+  background-color: #00539c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.register-btn:hover {
+  background-color: #003d73;
+}

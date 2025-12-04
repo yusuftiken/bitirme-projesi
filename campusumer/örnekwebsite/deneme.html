@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Summer - Türk Üniversiteleri Yaz Dersleri Takip Platformu</title>
+    <link rel="stylesheet" href="deneme.css">
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Campus Summer</div>
+            <ul class="nav-links">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#courses">Dersler</a></li>
+                <li><a href="#universities">Üniversiteler</a></li>
+                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <a href="#" class="cta-button">Giriş Yap</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Türkiye'nin En Kapsamlı Yaz Dersleri Platformu</h1>
+                    <p>200+ üniversiteden binlerce yaz dersi seçeneği tek platformda. Hayalindeki akademik programı oluştur!</p>
+                    <a href="#search" class="cta-button">Ders Aramaya Başla</a>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">200+</div>
+                            <div class="stat-label">Üniversite</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5000+</div>
+                            <div class="stat-label">Yaz Dersi</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">50K+</div>
+                            <div class="stat-label">Mutlu Öğrenci</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section" id="search">
+            <div class="container">
+                <div class="search-container">
+                    <h2 class="search-title">İdeal Yaz Dersini Bul</h2>
+                    <form class="search-form">
+                        <div class="form-group">
+                            <label for="university">Üniversite</label>
+                            <select id="university">
+                                <option value="">Üniversite Seçin</option>
+                                <option value="istanbul">İstanbul Üniversitesi</option>
+                                <option value="metu">ODTÜ</option>
+                                <option value="bogazici">Boğaziçi Üniversitesi</option>
+                                <option value="ankara">Ankara Üniversitesi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Şehir</label>
+                            <select id="city">
+                                <option value="">Şehir Seçin</option>
+                                <option value="istanbul">İstanbul</option>
+                                <option value="ankara">Ankara</option>
+                                <option value="izmir">İzmir</option>
+                                <option value="adana">Adana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="faculty">Fakülte</label>
+                            <select id="faculty">
+                                <option value="">Fakülte Seçin</option>
+                                <option value="engineering">Mühendislik</option>
+                                <option value="medicine">Tıp</option>
+                                <option value="law">Hukuk</option>
+                                <option value="business">İşletme</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Ders Dili</label>
+                            <select id="language">
+                                <option value="">Dil Seçin</option>
+                                <option value="turkish">Türkçe</option>
+                                <option value="english">İngilizce</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-button">🔍 Ders Ara</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Neden Campus Summer?</h2>
+                <div class="features-grid">
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">🎯</span>
+                        <h3>Akıllı Ders Önerileri</h3>
+                        <p>Akademik geçmişiniz ve hedeflerinize göre size özel ders önerileri alın. AI destekli algoritma ile en uygun seçenekleri keşfedin.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">🗺️</span>
+                        <h3>Harita Entegrasyonu</h3>
+                        <p>Üniversite konumlarını harita üzerinde görün. Mesafe, ulaşım seçenekleri ve konaklama bilgilerine kolayca erişin.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">📊</span>
+                        <h3>Kapsamlı Değerlendirmeler</h3>
+                        <p>Gerçek öğrenci yorumları ve puanlamaları ile bilinçli tercihler yapın. Dersin zorluk seviyesi ve içeriği hakkında bilgi edinin.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">📱</span>
+                        <h3>Mobil Uyumlu</h3>
+                        <p>Web ve mobil uygulamalar ile istediğiniz her yerden erişim sağlayın. Offline modu ile internet olmadan da program takibi yapın.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">🌍</span>
+                        <h3>Çok Dilli Destek</h3>
+                        <p>Türkçe ve İngilizce dil desteği ile uluslararası öğrenciler için tam erişilebilirlik. Tüm içerik her iki dilde mevcuttur.</p>
+                    </div>
+                    <div class="feature-card fade-in">
+                        <span class="feature-icon">📋</span>
+                        <h3>Kişisel Program</h3>
+                        <p>Seçtiğiniz dersleri organize edin, PDF program oluşturun ve başvuru süreçlerini takip edin. Çakışma kontrolü dahil!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container">
+                    <h2>Türkiye'deki Üniversiteler</h2>
+                    <p>200+ üniversiteden yaz dersi seçeneklerini harita üzerinde keşfedin</p>
+                    <div class="map-placeholder">
+                        <div>
+                            <div>🗺️</div>
+                            <div>İnteraktif Üniversite Haritası</div>
+                            <div style="font-size: 1rem; opacity: 0.8; margin-top: 1rem;">
+                                Üniversite konumları, mesafe hesaplaması ve rota bilgileri
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Öğrenci Deneyimleri</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            "Campus Summer sayesinde başka üniversitelerdeki yaz derslerini kolayca buldum. Mezuniyetimi 1 dönem öne çektim!"
+                        </div>
+                        <div class="testimonial-author">- Ayşe K., İTÜ Bilgisayar Mühendisliği</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            "Uluslararası öğrenci olarak platform çok yardımcı oldu. İngilizce destek ve açık arayüz sayesinde kolayca kullandım."
+                        </div>
+                        <div class="testimonial-author">- John M., Erasmus Öğrencisi</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            "Harita özelliği harika! Hangi şehirde hangi dersler var kolayca görebiliyorum. Artık yaz planımı yapmak çok kolay."
+                        </div>
+                        <div class="testimonial-author">- Mehmet A., ODTÜ İnşaat Mühendisliği</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Akademik Geleceğinizi Şekillendirin</h2>
+                <p>Türkiye'nin en kapsamlı yaz dersleri platformuna katılın ve hedeflerinize ulaşın</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn-primary">Ücretsiz Üye Ol</a>
+                    <a href="#" class="btn-secondary">Demoyu İzle</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Campus Summer</h3>
+                    <p>Türkiye'nin en kapsamlı yaz dersleri takip platformu. Akademik hedeflerinize ulaşmanın en kolay yolu.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <a href="#">Ana Sayfa</a>
+                    <a href="#">Ders Ara</a>
+                    <a href="#">Üniversiteler</a>
+                    <a href="#">Yardım Merkezi</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Destek</h3>
+                    <a href="#">SSS</a>
+                    <a href="#">İletişim</a>
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Kullanım Koşulları</a>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p>📧 info@campussummer.com</p>
+                    <p>📞 +90 212 XXX XXXX</p>
+                    <p>📍 İstanbul, Türkiye</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campus Summer. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Kullanıcı Veri Seti
+        const userData = {
+            "users": [
+                {
+                    "ad": "ATAKAN",
+                    "soyad": "BAŞKIR",
+                    "ogrenci_numarasi": "211504023"
+                },
+                {
+                    "ad": "YUSUF",
+                    "soyad": "TİKEN",
+                    "ogrenci_numarasi": "211504029"
+                },
+                {
+                    "ad": "FEVZİHAN",
+                    "soyad": "ALKAN",
+                    "ogrenci_numarasi": "211504019"
+                }
+            ]
+        };
+
+        // Mevcut kullanıcı bilgisi
+        let currentUser = null;
+
+        // Kullanıcı giriş fonksiyonu
+        function loginUser() {
+            const studentNumber = prompt("Öğrenci numaranızı girin:");
+            if (!studentNumber) return;
+
+            const user = userData.users.find(u => u.ogrenci_numarasi === studentNumber);
+            
+            if (user) {
+                currentUser = user;
+                updateUIForLoggedInUser();
+                alert(`Hoş geldiniz ${user.ad} ${user.soyad}!`);
+            } else {
+                alert("Kullanıcı bulunamadı. Lütfen geçerli bir öğrenci numarası girin.");
+            }
+        }
+
+        // Kullanıcı çıkış fonksiyonu
+        function logoutUser() {
+            currentUser = null;
+            updateUIForLoggedInUser();
+            alert("Başarıyla çıkış yaptınız.");
+        }
+
+        // UI güncellemesi
+        function updateUIForLoggedInUser() {
+            const ctaButton = document.querySelector('.cta-button');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (currentUser) {
+                ctaButton.textContent = 'Çıkış Yap';
+                ctaButton.onclick = logoutUser;
+                
+                // Kullanıcı bilgisini göster
+                const userInfo = document.createElement('div');
+                userInfo.id = 'user-info';
+                userInfo.style.cssText = `
+                    background: rgba(255,255,255,0.1);
+                    padding: 1rem;
+                    border-radius: 10px;
+                    margin-top: 2rem;
+                    backdrop-filter: blur(10px);
+                `;
+                userInfo.innerHTML = `
+                    <h3>👋 Hoş geldiniz!</h3>
+                    <p><strong>Ad Soyad:</strong> ${currentUser.ad} ${currentUser.soyad}</p>
+                    <p><strong>Öğrenci No:</strong> ${currentUser.ogrenci_numarasi}</p>
+                `;
+                
+                // Önceki user info varsa kaldır
+                const existingUserInfo = document.getElementById('user-info');
+                if (existingUserInfo) {
+                    existingUserInfo.remove();
+                }
+                
+                heroContent.appendChild(userInfo);
+            } else {
+                ctaButton.textContent = 'Giriş Yap';
+                ctaButton.onclick = loginUser;
+                
+                // User info'yu kaldır
+                const existingUserInfo = document.getElementById('user-info');
+                if (existingUserInfo) {
+                    existingUserInfo.remove();
+                }
+            }
+        }
+
+        // Kullanıcı listesini göster (Admin paneli gibi)
+        function showUserList() {
+            if (!currentUser) {
+                alert("Bu özelliği kullanmak için giriş yapmanız gerekiyor.");
+                return;
+            }
+
+            let userListHTML = "Kayıtlı Kullanıcılar:\n\n";
+            userData.users.forEach((user, index) => {
+                userListHTML += `${index + 1}. ${user.ad} ${user.soyad} (${user.ogrenci_numarasi})\n`;
+            });
+            
+            alert(userListHTML);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(102, 126, 234, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = `${Array.from(entry.target.parentElement.children).indexOf(entry.target) * 0.1}s`;
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Form submission handler
+        document.querySelector('.search-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (!currentUser) {
+                alert("Ders aramak için önce giriş yapmanız gerekiyor.");
+                return;
+            }
+            
+            // Collect form data
+            const formData = new FormData(e.target);
+            const searchCriteria = {};
+            for (let [key, value] of formData.entries()) {
+                if (value) searchCriteria[key] = value;
+            }
+            
+            // Show search results with user info
+            alert(`${currentUser.ad} ${currentUser.soyad} için arama kriterleri:\n${JSON.stringify(searchCriteria, null, 2)}\n\nArama sonuçları yükleniyor...`);
+        });
+
+        // Add typing effect to hero title
+        const heroTitle = document.querySelector('.hero h1');
+        const originalText = heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        const typeWriter = () => {
+            if (i < originalText.length) {
+                heroTitle.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        };
+        
+        setTimeout(typeWriter, 1000);
+
+        // Initialize login functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUIForLoggedInUser();
+        });
+
+        // Keyboard shortcut for user list (Ctrl+U)
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                showUserList();
+            }
+        });
+    </script>
+</body>
+</html>

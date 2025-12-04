@@ -1,0 +1,151 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-panel {
+  background-color: #fff;
+  width: 40%;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.user-type {
+  font-weight: bold;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+form {
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #00539c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9em;
+  text-align: right;
+  color: #00539c;
+  text-decoration: none;
+}
+
+.edevlet-btn {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #e00000;
+  color: white;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.announcement-panel {
+  width: 60%;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+}
+
+.announcement-panel h2 {
+  color: #e00000;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.announcement-panel a.link {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.red-text {
+  color: red;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.error-message {
+  color: #e00000;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #00539c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}

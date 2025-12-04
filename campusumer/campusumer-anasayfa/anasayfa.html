@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Summer</title>
+    <link rel="stylesheet" href="anasayfa.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="2.3.logo.png" alt="Campus Summer Logo" />
+          <span>Campus Summer</span>
+        </div>
+
+        <nav class="nav-menu">
+          <div class="nav-item">
+            <a href="anasayfa.html" class="nav-link active">Anasayfa</a>
+          </div>
+          <div class="nav-item">
+            <a href="../Dersler/dersler.html" class="nav-link">Dersler</a>
+          </div>
+          <div class="nav-item">
+            <a href="../Üniversiteler/Üniversitler.html" class="nav-link"
+              >Üniversiteler</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="../Fakülteler/fakülteler.html" class="nav-link"
+              >Fakülteler</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="../Hakkımızda/Hakkımızda.html" class="nav-link"
+              >Hakkımızda</a
+            >
+          </div>
+          <div class="nav-item">
+            <a href="../İletişim/iletisim.html" class="nav-link">İletişim</a>
+          </div>
+        </nav>
+
+        <!-- Profil Bölümü -->
+        <div class="profile-section">
+          <div class="profile-avatar" id="profileToggle">
+            <span id="avatarInitials">?</span>
+          </div>
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="profile-header">
+              <div class="profile-avatar-large">
+                <span id="avatarInitialsLarge">?</span>
+              </div>
+              <div class="profile-info">
+                <h4 id="profileName">Kullanıcı</h4>
+                <p id="profileEmail">email@example.com</p>
+              </div>
+            </div>
+            <div class="profile-details">
+              <div class="profile-detail-item">
+                <span class="detail-label">Kullanıcı Tipi:</span>
+                <span class="detail-value" id="profileType">-</span>
+              </div>
+              <div class="profile-detail-item">
+                <span class="detail-label">Okul Numarası:</span>
+                <span class="detail-value" id="profileStudentNumber">-</span>
+              </div>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-logout" id="logoutBtn">🚪 Çıkış Yap</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Türkiye'nin En Kapsamlı Yaz Dersleri Platformu</h1>
+          <p>200+ üniversiteden binlerce yaz dersi seçeneği tek platformda.</p>
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-number">200+</div>
+              <div class="stat-label">Üniversite</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Yaz Dersi</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">50K+</div>
+              <div class="stat-label">Mutlu Öğrenci</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section" id="search">
+      <div class="container">
+        <div class="search-container">
+          <h2 class="search-title">İdeal Yaz Dersini Bul</h2>
+          <form class="search-form">
+            <div class="form-group">
+              <label for="university">Üniversite</label>
+              <select id="university">
+                <option value="">Üniversite Seçin</option>
+                <option value="hasan-kalyoncu">
+                  Hasan Kalyoncu Üniversitesi
+                </option>
+                <option value="metu">ODTÜ</option>
+                <option value="bogazici">Boğaziçi Üniversitesi</option>
+                <option value="ankara">Ankara Üniversitesi</option>
+                <option value="istanbul">İstanbul Üniversitesi</option>
+                <option value="itu">İTÜ</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="faculty">Fakülte</label>
+              <select id="faculty">
+                <option value="">Fakülte Seçin</option>
+                <option value="engineering">Mühendislik</option>
+                <option value="medicine">Tıp</option>
+                <option value="law">Hukuk</option>
+                <option value="business">İşletme</option>
+                <option value="arts">Fen Edebiyat</option>
+                <option value="education">Eğitim</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="language">Ders Dili</label>
+              <select id="language">
+                <option value="">Dil Seçin</option>
+                <option value="turkish">Türkçe</option>
+                <option value="english">İngilizce</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="semester">Dönem</label>
+              <select id="semester">
+                <option value="">Dönem Seçin</option>
+                <option value="summer-2025">Yaz 2025</option>
+                <option value="fall-2025">Güz 2025</option>
+              </select>
+            </div>
+
+            <button type="submit" class="search-button">🔍 Ders Ara</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Kullanıcı bilgilerini yükle
+      function loadUserProfile() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        const token = localStorage.getItem("token");
+
+        if (!user || !token) {
+          // Giriş yapmamış kullanıcıyı giriş sayfasına yönlendir
+          window.location.href = "../öğrenci-giriş/öğrenci-giriş.html";
+          return;
+        }
+
+        // Profil bilgilerini doldur
+        const initials =
+          (user.firstName?.charAt(0) || "") + (user.lastName?.charAt(0) || "");
+        document.getElementById("avatarInitials").textContent =
+          initials.toUpperCase() || "?";
+        document.getElementById("avatarInitialsLarge").textContent =
+          initials.toUpperCase() || "?";
+        document.getElementById("profileName").textContent = `${
+          user.firstName || ""
+        } ${user.lastName || ""}`;
+        document.getElementById("profileEmail").textContent = user.email || "";
+        document.getElementById("profileType").textContent =
+          user.userType === "student" ? "Öğrenci" : "Akademisyen";
+        document.getElementById("profileStudentNumber").textContent =
+          user.studentNumber || user.username || "-";
+      }
+
+      // Profil dropdown toggle
+      document
+        .getElementById("profileToggle")
+        .addEventListener("click", function (e) {
+          e.stopPropagation();
+          const dropdown = document.getElementById("profileDropdown");
+          dropdown.classList.toggle("active");
+        });
+
+      // Dropdown dışına tıklanınca kapat
+      document.addEventListener("click", function (e) {
+        const dropdown = document.getElementById("profileDropdown");
+        const profileSection = document.querySelector(".profile-section");
+        if (!profileSection.contains(e.target)) {
+          dropdown.classList.remove("active");
+        }
+      });
+
+      // Çıkış yap
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", function () {
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
+          // Ana giriş sayfasına yönlendir
+          const basePath = window.location.pathname.split('/campusumer-anasayfa')[0];
+          window.location.href = basePath + '/website-giri%C5%9F-sayfas%C4%B1/website-giri%C5%9F-sayfas%C4%B1.html';
+        });
+
+      // Sayfa yüklendiğinde profili yükle
+      document.addEventListener("DOMContentLoaded", loadUserProfile);
+    </script>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Campus Summer</h3>
+            <p>
+              Türkiye'nin en kapsamlı yaz dersleri takip platformu. Akademik
+              hedeflerinize ulaşmanın en kolay yolu.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Hızlı Bağlantılar</h3>
+            <a href="anasayfa.html">Ana Sayfa</a>
+            <a href="../Üniversiteler/Üniversitler.html">Üniversiteler</a>
+            <a href="../Dersler/dersler.html">Dersler</a>
+            <a href="../Hakkımızda/Hakkımızda.html">Hakkımızda</a>
+          </div>
+          <div class="footer-section">
+            <h3>Destek</h3>
+            <a href="../İletişim/iletisim.html">İletişim</a>
+            <a href="../Gizlilik-politikası/gizlilikpolitikası.html"
+              >Gizlilik Politikası</a
+            >
+          </div>
+          <div class="footer-section">
+            <h3>İletişim</h3>
+            <p>📧 atakan.baskir@std.hku.edu.tr</p>
+            <p>📞 +90 506 536 1780</p>
+            <p>📍 Gaziantep, Türkiye</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Campus Summer. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

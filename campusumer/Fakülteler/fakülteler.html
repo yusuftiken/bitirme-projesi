@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakülteler - Campus Summer</title>
+    <link rel="stylesheet" href="fakülteler.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="2.3.logo.png" alt="Campus Summer Logo">
+                <span>Campus Summer</span> 
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-item">
+                    <a href="../Ana sayfa/anasayfa.html" class="nav-link">Anasayfa</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Dersler/dersler.html" class="nav-link">Dersler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Üniversiteler/Üniversitler.html" class="nav-link">Üniversiteler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="fakülteler.html" class="nav-link active">Fakülteler</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../Hakkımızda/Hakkımızda.html" class="nav-link">Hakkımızda</a>
+                </div>
+                <div class="nav-item">
+                    <a href="../İletişim/iletisim.html" class="nav-link">İletişim</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fakülteler</h1>
+                <p>Türkiye'nin önde gelen üniversitelerinin fakültelerini keşfedin ve yaz dersi seçeneklerini inceleyin.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <h2>Fakülte Ara</h2>
+                <div class="filter-form">
+                    <input type="text" id="searchInput" placeholder="Fakülte adı ara..." class="search-input">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">Tüm Kategoriler</option>
+                        <option value="engineering">Mühendislik</option>
+                        <option value="health">Sağlık Bilimleri</option>
+                        <option value="social">Sosyal Bilimler</option>
+                        <option value="science">Fen Bilimleri</option>
+                        <option value="arts">Sanat ve Tasarım</option>
+                        <option value="business">İşletme ve Ekonomi</option>
+                        <option value="education">Eğitim</option>
+                    </select>
+                    <select id="languageFilter" class="filter-select">
+                        <option value="">Tüm Diller</option>
+                        <option value="turkish">Türkçe</option>
+                        <option value="english">İngilizce</option>
+                        <option value="both">İkisi de</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faculties-section">
+        <div class="container">
+            <div class="faculties-grid" id="facultiesGrid">
+                
+                <!-- Mühendislik Fakültesi -->
+                <div class="faculty-card" data-category="engineering" data-language="both">
+                    <div class="faculty-icon">⚙️</div>
+                    <h3>Mühendislik Fakültesi</h3>
+                    <p class="faculty-description">Teknolojinin geleceğini şekillendiren bölümler: Bilgisayar, Elektrik-Elektronik, Makine, İnşaat, Endüstri Mühendisliği</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Bilgisayar Müh.</span>
+                            <span class="department-tag">Elektrik-Elektronik</span>
+                            <span class="department-tag">Makine Müh.</span>
+                            <span class="department-tag">İnşaat Müh.</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 45+ Üniversite</span>
+                            <span class="stat">📚 120+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR/EN</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Tıp Fakültesi -->
+                <div class="faculty-card" data-category="health" data-language="turkish">
+                    <div class="faculty-icon">🏥</div>
+                    <h3>Tıp Fakültesi</h3>
+                    <p class="faculty-description">İnsan sağlığının korunması ve tedavisinde uzman hekim yetiştiren prestijli fakülte</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Genel Tıp</span>
+                            <span class="department-tag">Klinik Tıp</span>
+                            <span class="department-tag">Temel Tıp</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 35+ Üniversite</span>
+                            <span class="stat">📚 85+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Hukuk Fakültesi -->
+                <div class="faculty-card" data-category="social" data-language="turkish">
+                    <div class="faculty-icon">⚖️</div>
+                    <h3>Hukuk Fakültesi</h3>
+                    <p class="faculty-description">Adalet sisteminin temelini oluşturan hukukçular yetiştiren köklü fakülte</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Kamu Hukuku</span>
+                            <span class="department-tag">Özel Hukuk</span>
+                            <span class="department-tag">Ceza Hukuku</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 40+ Üniversite</span>
+                            <span class="stat">📚 65+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- İktisadi ve İdari Bilimler Fakültesi -->
+                <div class="faculty-card" data-category="business" data-language="both">
+                    <div class="faculty-icon">💼</div>
+                    <h3>İktisadi ve İdari Bilimler Fakültesi</h3>
+                    <p class="faculty-description">İş dünyasının liderleri: İşletme, Ekonomi, Kamu Yönetimi, Uluslararası İlişkiler</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">İşletme</span>
+                            <span class="department-tag">Ekonomi</span>
+                            <span class="department-tag">Kamu Yönetimi</span>
+                            <span class="department-tag">Uluslararası İlişkiler</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 55+ Üniversite</span>
+                            <span class="stat">📚 95+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR/EN</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Fen Fakültesi -->
+                <div class="faculty-card" data-category="science" data-language="both">
+                    <div class="faculty-icon">🔬</div>
+                    <h3>Fen Fakültesi</h3>
+                    <p class="faculty-description">Bilimin temel dalları: Matematik, Fizik, Kimya, Biyoloji, İstatistik</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Matematik</span>
+                            <span class="department-tag">Fizik</span>
+                            <span class="department-tag">Kimya</span>
+                            <span class="department-tag">Biyoloji</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 50+ Üniversite</span>
+                            <span class="stat">📚 110+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR/EN</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Edebiyat Fakültesi -->
+                <div class="faculty-card" data-category="social" data-language="turkish">
+                    <div class="faculty-icon">📚</div>
+                    <h3>Edebiyat Fakültesi</h3>
+                    <p class="faculty-description">İnsan ve toplum bilimleri: Türk Dili ve Edebiyatı, Tarih, Felsefe, Sosyoloji, Psikoloji</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Türk Dili Edebiyatı</span>
+                            <span class="department-tag">Tarih</span>
+                            <span class="department-tag">Felsefe</span>
+                            <span class="department-tag">Sosyoloji</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 48+ Üniversite</span>
+                            <span class="stat">📚 88+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Mimarlık Fakültesi -->
+                <div class="faculty-card" data-category="arts" data-language="both">
+                    <div class="faculty-icon">🏛️</div>
+                    <h3>Mimarlık Fakültesi</h3>
+                    <p class="faculty-description">Yaşam alanlarını tasarlayan yaratıcı meslek: Mimarlık, İç Mimarlık, Peyzaj Mimarlığı</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Mimarlık</span>
+                            <span class="department-tag">İç Mimarlık</span>
+                            <span class="department-tag">Peyzaj Mimarlığı</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 35+ Üniversite</span>
+                            <span class="stat">📚 72+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR/EN</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Güzel Sanatlar Fakültesi -->
+                <div class="faculty-card" data-category="arts" data-language="turkish">
+                    <div class="faculty-icon">🎨</div>
+                    <h3>Güzel Sanatlar Fakültesi</h3>
+                    <p class="faculty-description">Sanatın her dalında yaratıcılık: Resim, Heykel, Grafik Tasarım, Seramik, Tekstil</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Resim</span>
+                            <span class="department-tag">Grafik Tasarım</span>
+                            <span class="department-tag">Heykel</span>
+                            <span class="department-tag">Seramik</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 25+ Üniversite</span>
+                            <span class="stat">📚 45+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Eğitim Fakültesi -->
+                <div class="faculty-card" data-category="education" data-language="turkish">
+                    <div class="faculty-icon">🎓</div>
+                    <h3>Eğitim Fakültesi</h3>
+                    <p class="faculty-description">Geleceğin öğretmenleri: Okul Öncesi, Sınıf Öğretmenliği, Matematik Öğretmenliği</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Sınıf Öğretmenliği</span>
+                            <span class="department-tag">Okul Öncesi</span>
+                            <span class="department-tag">Matematik Öğrt.</span>
+                            <span class="department-tag">Fen Öğretmenliği</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 60+ Üniversite</span>
+                            <span class="stat">📚 105+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Sağlık Bilimleri Fakültesi -->
+                <div class="faculty-card" data-category="health" data-language="turkish">
+                    <div class="faculty-icon">🩺</div>
+                    <h3>Sağlık Bilimleri Fakültesi</h3>
+                    <p class="faculty-description">Sağlık hizmetlerinin kalbi: Hemşirelik, Fizyoterapi, Beslenme ve Diyetetik</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Hemşirelik</span>
+                            <span class="department-tag">Fizyoterapi</span>
+                            <span class="department-tag">Beslenme Diyetetik</span>
+                            <span class="department-tag">Odyoloji</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 42+ Üniversite</span>
+                            <span class="stat">📚 78+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- İletişim Fakültesi -->
+                <div class="faculty-card" data-category="social" data-language="both">
+                    <div class="faculty-icon">📺</div>
+                    <h3>İletişim Fakültesi</h3>
+                    <p class="faculty-description">Medya ve iletişim dünyası: Gazetecilik, Halkla İlişkiler, Radyo TV Sinema</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Gazetecilik</span>
+                            <span class="department-tag">Halkla İlişkiler</span>
+                            <span class="department-tag">Radyo TV Sinema</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 30+ Üniversite</span>
+                            <span class="stat">📚 55+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR/EN</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+                <!-- Diş Hekimliği Fakültesi -->
+                <div class="faculty-card" data-category="health" data-language="turkish">
+                    <div class="faculty-icon">🦷</div>
+                    <h3>Diş Hekimliği Fakültesi</h3>
+                    <p class="faculty-description">Ağız ve diş sağlığı uzmanları: Temel ve klinik diş hekimliği eğitimi</p>
+                    <div class="faculty-info">
+                        <div class="departments">
+                            <span class="department-tag">Temel Diş Hekimliği</span>
+                            <span class="department-tag">Klinik Diş Hekimliği</span>
+                            <span class="department-tag">Oral Diagnoz</span>
+                        </div>
+                        <div class="faculty-stats">
+                            <span class="stat">🏛️ 28+ Üniversite</span>
+                            <span class="stat">📚 42+ Yaz Dersi</span>
+                            <span class="stat">🌍 TR</span>
+                        </div>
+                    </div>
+                    <button class="view-courses-btn">Dersleri İncele</button>
+                </div>
+
+            </div>
+        </div>
+    </section>courses-btn">Dersleri Görüntüle</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Farklı Fakülte</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Üniversite</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Yaz Dersi</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25K+</div>
+                    <div class="stat-label">Başarılı Öğrenci</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Campus Summer</h3>
+                    <p>Türkiye'nin en kapsamlı yaz dersleri takip platformu. Akademik hedeflerinize ulaşmanın en kolay yolu.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <a href="../Ana sayfa/anasayfa.html">Ana Sayfa</a>
+                    <a href="../Üniversiteler/Üniversitler.html">Üniversiteler</a>
+                    <a href="../Dersler/dersler.html">Dersler</a>
+                    <a href="../Hakkımızda/Hakkımızda.html">Hakkımızda</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Destek</h3>                    
+                    <a href="../İletişim/iletisim.html">İletişim</a>
+                    <a href="../Gizlilik-politikası/gizlilikpolitikası.html">Gizlilik Politikası</a>
+                </div>
+                <div class="footer-section">
+                    <h3>İletişim</h3>
+                    <p>📧 atakan.baskir@std.hku.edu.tr</p>
+                    <p>📞 +90 506 536 1780</p>
+                    <p>📍 Gaziantep, Türkiye</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Campus Summer. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Arama ve filtreleme fonksiyonu
+        function filterFaculties() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const languageFilter = document.getElementById('languageFilter').value;
+            const facultyCards = document.querySelectorAll('.faculty-card');
+
+            facultyCards.forEach(card => {
+                const facultyName = card.querySelector('h3').textContent.toLowerCase();
+                const facultyDescription = card.querySelector('.faculty-description').textContent.toLowerCase();
+                const category = card.getAttribute('data-category');
+                const language = card.getAttribute('data-language');
+
+                const matchesSearch = facultyName.includes(searchInput) || facultyDescription.includes(searchInput);
+                const matchesCategory = !categoryFilter || category === categoryFilter;
+                const matchesLanguage = !languageFilter || language === languageFilter || language === 'both';
+
+                if (matchesSearch && matchesCategory && matchesLanguage) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Event listener'lar
+        document.getElementById('searchInput').addEventListener('input', filterFaculties);
+        document.getElementById('categoryFilter').addEventListener('change', filterFaculties);
+        document.getElementById('languageFilter').addEventListener('change', filterFaculties);
+
+        // Ders görüntüleme butonları
+        document.querySelectorAll('.view-courses-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Dersleri görüntüleme sayfasına yönlendiriliyorsunuz...');
+                // Burada gerçek uygulamada dersler sayfasına yönlendirme yapılacak
+            });
+        });
+
+        // CSS animasyonu
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+</body>
+</html>
